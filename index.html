@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lollo Pub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   PALETA DO LOLLO PUB
+========================================================= */
+
+:root{
+
+    --black:#070807;
+    --black-soft:#0d100e;
+    --black-light:#131815;
+
+    --green:#08281c;
+    --green-soft:#0d3827;
+
+    --gold:#d5a548;
+    --gold-light:#efc66e;
+    --gold-dark:#9f7425;
+
+    --cream:#f3e5c2;
+    --cream-soft:#d9ccb0;
+
+    --text:#aaa79d;
+
+    --line:rgba(213,165,72,.24);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:var(--black);
+
+    color:var(--cream);
+
+    overflow-x:hidden;
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    width:100%;
+
+    min-height:72vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:80px 6% 100px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            rgba(8,40,28,.90) 0%,
+            rgba(8,40,28,.45) 22%,
+            rgba(7,8,7,.95) 58%,
+            var(--black) 80%
+        );
+
+}
+
+
+/* brilho dourado muito discreto */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(213,165,72,.08),
+        transparent 68%
+    );
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+}
+
+
+/* linha vertical inferior */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:1px;
+
+    height:70px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    opacity:.65;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content{
+
+    width:90%;
+
+    max-width:900px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.hero-logo{
+
+    width:auto;
+
+    height:auto;
+
+    max-width:390px;
+
+    max-height:390px;
+
+    object-fit:contain;
+
+    margin-bottom:35px;
+
+    filter:
+
+        drop-shadow(
+            0 0 20px rgba(0,0,0,.8)
+        )
+
+        drop-shadow(
+            0 0 30px rgba(213,165,72,.08)
+        );
+
+    transition:.6s;
+
+}
+
+
+.hero-logo:hover{
+
+    transform:scale(1.025);
+
+}
+
+
+/* =========================================================
+   HERO SUBTÍTULO
+========================================================= */
+
+.hero-content p{
+
+    color:var(--gold-light);
+
+    font-size:11px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    margin-top:5px;
+
+}
+
+
+/* =========================================================
+   SEÇÃO PRINCIPAL
+========================================================= */
+
+.restaurant-section{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:90px 6% 110px;
+
+}
+
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.section-tag{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+========================================================= */
+
+.restaurant-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:72px;
+
+    font-weight:300;
+
+    line-height:1.05;
+
+    color:var(--cream);
+
+    margin-bottom:10px;
+
+}
+
+
+/* =========================================================
+   LINHA DECORATIVA
+========================================================= */
+
+.gold-line{
+
+    width:55px;
+
+    height:1px;
+
+    background:var(--gold);
+
+    margin:25px 0 35px;
+
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+.restaurant-description{
+
+    max-width:800px;
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:15px;
+
+    margin-bottom:80px;
+
+}
+
+
+/* =========================================================
+   BLOCOS DE INFORMAÇÃO
+========================================================= */
+
+.info-box{
+
+    border-top:1px solid var(--line);
+
+    padding-top:25px;
+
+}
+
+
+.info-box h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    font-weight:400;
+
+    color:var(--cream);
+
+    margin-bottom:15px;
+
+}
+
+
+.info-box p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:14px;
+
+}
+
+
+.info-box strong{
+
+    color:var(--cream);
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.gallery{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:30px;
+
+    margin-bottom:90px;
+
+    align-items:center;
+
+}
+
+
+.gallery img{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.6s;
+
+    border-radius:2px;
+
+    filter:
+
+        saturate(.78)
+
+        brightness(.88);
+
+}
+
+
+.gallery img:hover{
+
+    transform:scale(1.035);
+
+    filter:
+
+        saturate(1)
+
+        brightness(1);
+
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+    margin-bottom:90px;
+
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.main-btn{
+
+    display:inline-block;
+
+    padding:15px 45px;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold-light);
+
+    text-decoration:none;
+
+    letter-spacing:3px;
+
+    font-size:11px;
+
+    transition:.35s;
+
+    background:transparent;
+
+}
+
+
+.main-btn:hover{
+
+    background:var(--gold);
+
+    color:#080907;
+
+    box-shadow:
+
+        0 0 25px rgba(213,165,72,.12);
+
+}
+
+
+/* =========================================================
+   CARDÁPIO
+========================================================= */
+
+.menu-box{
+
+    padding:60px 0;
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+
+    margin-bottom:90px;
+
+    position:relative;
+
+}
+
+
+/* pequeno detalhe lateral */
+
+.menu-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:-1px;
+
+    width:45px;
+
+    height:1px;
+
+    background:var(--gold);
+
+}
+
+
+.menu-box h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:44px;
+
+    font-weight:400;
+
+    color:var(--cream);
+
+    margin-bottom:15px;
+
+}
+
+
+.menu-box p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:14px;
+
+    max-width:700px;
+
+    margin-bottom:28px;
+
+}
+
+
+/* =========================================================
+   EXPERIÊNCIA
+========================================================= */
+
+.experience{
+
+    margin-bottom:90px;
+
+}
+
+
+.experience-text{
+
+    max-width:800px;
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:15px;
+
+}
+
+
+/* =========================================================
+   LOCALIZAÇÃO
+========================================================= */
+
+.location-section{
+
+    margin-top:10px;
+
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.map{
+
+    width:100%;
+
+    height:500px;
+
+    overflow:hidden;
+
+    margin-top:30px;
+
+    margin-bottom:90px;
+
+    border:1px solid rgba(213,165,72,.18);
+
+    position:relative;
+
+}
+
+
+.map::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    border:1px solid rgba(213,165,72,.08);
+
+}
+
+
+.map iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+    filter:
+
+        grayscale(100%)
+
+        contrast(90%)
+
+        brightness(65%);
+
+}
+
+
+/* =========================================================
+   VOLTAR
+========================================================= */
+
+.back-container{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .hero{
+
+        min-height:65vh;
+
+    }
+
+
+    .hero-logo{
+
+        max-width:330px;
+
+        max-height:330px;
+
+    }
+
+
+    .restaurant-title{
+
+        font-size:60px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .map{
+
+        height:400px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+    .hero{
+
+        min-height:60vh;
+
+        padding-top:60px;
+
+        padding-bottom:80px;
+
+    }
+
+
+    .hero-logo{
+
+        max-width:280px;
+
+        max-height:280px;
+
+    }
+
+
+    .hero-content p{
+
+        font-size:9px;
+
+        letter-spacing:4px;
+
+    }
+
+
+    .restaurant-title{
+
+        font-size:52px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media(max-width:600px){
+
+    .hero{
+
+        min-height:58vh;
+
+        padding:55px 7% 80px;
+
+    }
+
+
+    .hero-logo{
+
+        max-width:235px;
+
+        max-height:235px;
+
+        margin-bottom:28px;
+
+    }
+
+
+    .hero-content p{
+
+        font-size:8px;
+
+        letter-spacing:3px;
+
+        line-height:1.8;
+
+    }
+
+
+    .restaurant-section{
+
+        padding:65px 7% 85px;
+
+    }
+
+
+    .restaurant-title{
+
+        font-size:46px;
+
+    }
+
+
+    .restaurant-description{
+
+        font-size:14px;
+
+        margin-bottom:65px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        margin-bottom:70px;
+
+    }
+
+
+    .info-grid{
+
+        gap:50px;
+
+        margin-bottom:70px;
+
+    }
+
+
+    .main-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+    .menu-box{
+
+        padding:50px 0;
+
+        margin-bottom:70px;
+
+    }
+
+
+    .menu-box h3{
+
+        font-size:38px;
+
+    }
+
+
+    .experience{
+
+        margin-bottom:70px;
+
+    }
+
+
+    .map{
+
+        height:350px;
+
+        margin-bottom:70px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <img
+            src="logolollopub.png"
+            alt="Logo Lollo Pub"
+            class="hero-logo"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<section class="restaurant-section">
+
+
+    <!-- IDENTIFICAÇÃO -->
+
+    <span class="section-tag">
+
+        PUB
+
+    </span>
+
+
+    <h2 class="restaurant-title">
+
+        Lollo 
+
+    </h2>
+
+
+    <div class="gold-line"></div>
+
+
+    <p class="restaurant-description">
+
+        Um pub no coração de Belém feito para reunir os amigos, tomar uma cerveja bem gelada e curtir o melhor do rock em um ambiente de boas vibrações! 🎸🍻
+
+    </p>
+
+
+
+    <!-- =================================================
+         AMBIENTE
+    ================================================== -->
+
+    <div class="info-box">
+
+        <h3>
+
+            Ambiente
+
+        </h3>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <img
+            src="lollo-1.jpeg"
+            alt="Ambiente do Lollo Pub"
+        >
+
+
+        <img
+            src="lollo-2.jpeg"
+            alt="Interior do Lollo Pub"
+        >
+
+
+        <img
+            src="lollo-3.jpeg"
+            alt="Ambiente do Lollo Pub"
+        >
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         ENDEREÇO + REDES SOCIAIS
+    ================================================== -->
+
+    <div class="info-grid">
+
+
+        <div class="info-box">
+
+            <h3>
+
+                Endereço
+
+            </h3>
+
+
+            <p>
+
+                R. Arcipreste Manoel Teodoro, 622<br>
+
+                Batista Campos<br>
+
+                Belém - PA, 66015-040
+
+            </p>
+
+        </div>
+
+
+
+        <div class="info-box">
+
+            <h3>
+
+                Redes sociais
+
+            </h3>
+
+
+            <p>
+
+                Acompanhe a programação,
+                novidades, drinks, eventos
+                e experiências do Lollo Pub.
+
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="https://www.instagram.com/lollopub622/"
+                class="main-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                INSTAGRAM
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CARDÁPIO
+    ================================================== -->
+
+    <div class="menu-box">
+
+
+        <h3>
+
+            Cardápio
+
+        </h3>
+
+
+        <p>
+
+            Confira o cardápio completo do Lollo Pub,
+            com drinks, bebidas, pratos e valores.
+
+        </p>
+
+
+        <a
+            href="srtakimcardapio.pdf"
+            class="main-btn"
+            target="_blank"
+        >
+
+            VER CARDÁPIO
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         EXPERIÊNCIA
+    ================================================== -->
+
+    <div class="experience">
+
+
+        <div class="info-box">
+
+            <h3>
+
+                Qual a boa do fim de semana? 🎸🔥
+
+            </h3>
+
+        </div>
+
+
+        <p class="experience-text">
+            Nesta sexta, dia 09, no Lollo Pub rola o Ciriu's Rockfest com 4 bandas confirmadas: Café Imaginário, Infinito Nada, Mákina e Má Distribuição.<br>
+            Saiba mais: @lollopub622
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         LOCALIZAÇÃO
+    ================================================== -->
+
+    <div class="location-section">
+
+
+        <div class="info-box">
+
+            <h3>
+
+                Localização
+
+            </h3>
+
+        </div>
+
+
+        <div class="map">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5273462351947!2d-48.49568282602477!3d-1.4575771358352327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48f0cddf65f11%3A0x83ed52cd37101634!2sLollo%20PUB!5e0!3m2!1spt-BR!2sbr!4v1791317567498!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         VOLTAR
+    ================================================== -->
+
+    <div class="back-container">
+
+        <a
+            href="ondecomer.html"
+            class="main-btn"
+        >
+
+            VOLTAR
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</body>
+
+</html>
